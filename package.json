@@ -1,11 +1,21 @@
 {
-  "name": "parking-slot",
+  "name": "@autospace/parking-slot",
   "version": "1.0.0",
   "description": "",
-  "private":"true",
+  "private": "true",
   "scripts": {
+    "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "tsc" : "pnpm --parallel -r run tsc",
+    "lint": "pnpm --parallel -r run lint",
+    "validate": "pnpm format:write && pnpm tsc && pnpm lint"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "typescript": "^5.5.4"
+  }
 }
